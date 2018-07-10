@@ -16,14 +16,17 @@ class Owner
 
   def buy_fish(name)
     Fish.new(name).tap {|f| self.pets[:fishes]<<f}
+    #pets[:fishes] << Fish.new(name)
   end
 
   def buy_cat(name)
     Cat.new(name).tap {|c| self.pets[:cats]<<c}
+    #pets[:cats] << Cat.new(name)
   end
 
   def buy_dog(name)
     Dog.new(name).tap {|d| self.pets[:dogs]<<d}
+    #pets[:dogs] << Dog.new(name)
   end
 
   def walk_dogs
